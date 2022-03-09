@@ -1,0 +1,116 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.center{
+    text-align: center;
+}
+.container-grid {
+  display: grid;
+ 
+  grid-template-areas: ' personal personal personal personal' 
+                       'aside main main main'
+                       'footer footer footer footer';
+    grid-template-columns: 1fr 1fr 1fr;
+}
+.personal {
+    grid-area:personal;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 2%;
+    background-color:  #e67300
+;
+    color: aliceblue;
+}
+.personal img {
+  width: 200px;
+  height: 200px;
+  border-radius:50% ;
+}
+.personal div{
+    width: 55%;
+    padding: 3%;
+}
+.em2{
+    font-size: 2rem;
+    font-weight: bold;
+    padding-bottom: 1%;
+}
+.em3{
+    font-size: 1.3rem;
+    font-weight: bold;
+    padding-bottom:0.5%;
+}
+.em15{
+    font-size: 1.3rem;
+    font-weight: bold;
+    padding-bottom: 2%;
+}
+aside{
+    background-color: antiquewhite;
+    grid-area:aside;
+    padding: 2%;
+}
+.box{
+    background-color: aliceblue;
+    padding: 3%;
+    margin-bottom: 2%;
+    border-radius: 20px;
+     box-shadow: 6px 6px 1px #ddd;
+}
+.box div i{
+    font-size: 1.5rem;
+    padding: 1.5%;
+}
+.lang-package{padding: 2%;}
+.progress{
+    display: flex;
+    height: 20px;
+    background-color:#d9d9d9;
+}
+main{
+    background-color: antiquewhite;
+    grid-area:main;
+    padding: 1%;
+}
+.box2{
+    background-color: aliceblue;
+    padding: 3%;
+    margin-bottom: 2%;
+    border-radius: 20px;
+     box-shadow: 6px 6px 1px #ddd;
+}
+footer{
+    grid-area:footer;
+    display: flex;
+}
+
+footer span{
+    width: 33.3333%;
+}
+
+
+
+@media only screen and (max-width: 768px) {
+ .container-grid {
+ 
+  grid-template-areas: ' personal' 
+                       ' main'
+                       'aside'
+                       'footer';
+    grid-template-columns: 1fr;
+}
+.personal div{
+    width: 90%;
+    padding: 10% 0%;
+}
+    .em2{
+        text-align: center;
+    }
+}
+
+
+
